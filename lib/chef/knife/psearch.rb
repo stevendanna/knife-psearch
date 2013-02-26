@@ -53,7 +53,7 @@ class Psearch < Chef::Knife
     specs = @keys.map { |i| i.split(",") }.flatten
     specs.each do |spc|
       name, value = spc.split("=")
-      key_hash[name] = value.split("_")
+      key_hash[name] = value.split(".")
     end
     # This seems like a sane default.  The results without the name
     # are usually not what we want.
