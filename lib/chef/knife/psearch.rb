@@ -77,6 +77,7 @@ class Psearch < Chef::Knife
                        elsif @index == "node"
                          DEFAULT_NODE_HASH
                        else
+                         ui.warn("Falling back to full search.  Use the -a or -i option to enable parital search")
                          nil
                        end
 
